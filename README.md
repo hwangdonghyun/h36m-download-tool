@@ -1,4 +1,7 @@
-# Human3.6M dataset fetcher
+# Human3.6M download tool
+
+This code is built on top of
+https://github.com/anibali/h36m-fetch
 
 [Human3.6M](http://vision.imar.ro/human3.6m/description.php) is a 3D
 human pose dataset containing 3.6 million human poses and corresponding
@@ -17,13 +20,6 @@ the maintainers of the dataset.**
 * CDF
 * ffmpeg 3.2.4
 
-Alternatively, a Dockerfile is provided which has all of the
-requirements set up. You can use it to run scripts like so:
-
-```bash
-$ docker-compose run --rm --user="$(id -u):$(id -g)" main python3 <script>
-```
-
 ## Usage
 
 1. Firstly, you will need to create an account at
@@ -35,7 +31,7 @@ $ docker-compose run --rm --user="$(id -u):$(id -g)" main python3 <script>
 4. Use the `download_all.py` script to download the dataset,
    `extract_all.py` to extract the downloaded archives, and
    `process_all.py` to preprocess the dataset into an easier to use
-   format.
+   format, and 'merge_all.py' to merge every subject and category and split to train and test set.
 
 ## Frame sampling
 
